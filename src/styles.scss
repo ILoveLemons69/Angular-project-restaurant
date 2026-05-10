@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+.active {
+    color: rgb(65, 90, 16);
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+app-home, app-cart, app-menu, app-log-in, app-sign-up {
+  display: block;
+  animation: fadeSlideUp 0.8s ease-out;
+}
