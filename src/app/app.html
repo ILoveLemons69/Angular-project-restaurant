@@ -4,4 +4,15 @@
     <div style="margin-top: 78px;"></div>
     
     <router-outlet></router-outlet>
+    <div routerLink="/menu" routerLinkActive #rla="routerLinkActive" style="display: none;"></div>
 </div>
+
+@if (rla.isActive) {
+    <div class="card-container">
+        <section class="cards">
+          @for (item of products; track $index) {
+            <app-card [cardData]="item" class="card"></app-card>
+          }
+        </section>
+    </div>
+}
